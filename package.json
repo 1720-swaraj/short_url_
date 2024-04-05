@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "",
   "main": "app.mjs",
+  "engines": {
+    "node": "18.x"
+  },
   "scripts": {
     "start": "node app.mjs",
     "dev": "nodemon app.mjs",
