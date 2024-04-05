@@ -14,7 +14,7 @@
     <h1>home page</h1>
     <form method="post" action="/url">
       <% if (locals.id) { %>
-      <p>URL genereted http://localhost:8001/url/<%= id %></p>
+      <p>URL genereted http://localhost:8000/url/<%= id %></p>
       <% } %>
       <label>Type your original URL here</label>
       <input type="text" name="redirectUrl" placeholder="https://google.com" />
