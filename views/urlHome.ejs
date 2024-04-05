@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>home page</h1>
+    <form method="post" action="/url">
+      <% if (locals.id) { %>
+      <p>URL genereted http://localhost:8001/url/<%= id %></p>
+      <% } %>
+      <label>Type your original URL here</label>
+      <input type="text" name="redirectUrl" placeholder="https://google.com" />
+      <button type="submit">Generate</button>
+      <div>
+        <% if (locals.urldata) { %>
+        <table>
+          <thead>
+            <th>sr no.</th>
+            <th>short ID</th>
+            <th>Redirect ID</th>
+            <th>Counts</th>
+          </thead>
+          <tbody>
+            <% urldata.forEach((data,index) => { %>
+            <tr>
+              <td><%= index + 1 %></td>
+              <td><%= data.shortId %></td>
+              <td><%= data.redirectUrl %></td>
+              <td><%= data.visitHistory.length %></td>
+            </tr>
+            <% }) %>
+          </tbody>
+        </table>
+        <% } %>
+      </div>
+    </form>
+  </body>
+</html>
