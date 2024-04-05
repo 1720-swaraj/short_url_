@@ -12,7 +12,7 @@ import { urlRouter } from "./routes/urlRouter.mjs";
 import { staticRouter } from "./routes/staticRouter.mjs";
 import { userRouter } from "./routes/userRouter.mjs";
 const app = express();
-const PORT = process.env.PORT || 8001;
+const PORT = process.env.PORT || 8000;
 dbConnection();
 app.set("view engine", "ejs");
 app.set("views", path.resolve("./views"));
@@ -24,4 +24,4 @@ app
   .use("/url",restrictTo(["NORMAL","ADMIN"]), urlRouter)
   .use("/user", userRouter)
   .use("/", staticRouter);
-app.listen(PORT, () => console.log(`listning to port ${PORT}`));
+app.listen(process.env.PORT, () => console.log(`listning to port ${PORT}`));

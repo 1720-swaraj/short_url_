@@ -1,5 +1,6 @@
 import jwt from "jsonwebtoken";
-const secret = "swaraj*123";
+import "dotenv/config";
+const secret = process.env.SECRET_KEY;
 export const setUser = (user) => {
   return jwt.sign(
     { _id: user._id, email: user.email, role: user.role },
