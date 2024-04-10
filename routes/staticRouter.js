@@ -1,7 +1,7 @@
 import express from "express";
-import { url } from "../models/urlModel.mjs";
-import { userSchema } from "../models/users.mjs";
-import { restrictTo } from "../middleware/authMiddleware.mjs";
+import { url } from "../models/urlModel.js";
+import { userSchema } from "../models/users.js";
+import { restrictTo } from "../middleware/authMiddleware.js";
 export const staticRouter = express.Router();
 
 staticRouter

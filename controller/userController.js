@@ -1,6 +1,6 @@
-import { userSchema } from "../models/users.mjs";
+import { userSchema } from "../models/users.js";
 import { v4 as uuidv4 } from "uuid";
-import { setUser } from "../authService/auth.mjs";
+import { setUser } from "../authService/auth.js";
 export const handleUserSignUp = async (req, res) => {
   const { name, email, password } = req.body;
   await userSchema.create({

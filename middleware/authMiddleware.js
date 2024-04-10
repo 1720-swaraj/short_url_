@@ -1,4 +1,4 @@
-import { getUser } from "../authService/auth.mjs";
+import { getUser } from "../authService/auth.js";
 
 export const checkForAuthentication = (req, res, next) => {
   const tokenCookie = req.cookies?.token;

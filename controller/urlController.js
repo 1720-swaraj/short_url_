@@ -1,7 +1,6 @@
 import { nanoid } from "nanoid";
-import mongoose from "mongoose";
-import { url } from "../models/urlModel.mjs";
-import { userSchema } from "../models/users.mjs";
+
+import { url } from "../models/urlModel.js";
 
 export const handleGenerateNewUrl = async (req, res) => {
   const body = req.body;

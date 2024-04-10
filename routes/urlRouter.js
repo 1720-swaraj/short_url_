@@ -4,7 +4,7 @@ import {
   handleGenerateNewUrl,
   handleRedirectToOriginalUrl,
   handleAnalytics,
-} from "../controller/urlController.mjs";
+} from "../controller/urlController.js";
 
 urlRouter.route("/").post(handleGenerateNewUrl);
 

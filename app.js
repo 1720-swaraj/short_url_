@@ -1,16 +1,16 @@
 import "dotenv/config";
 import express from "express";
-import { dbConnection } from "./config/dbConnection.mjs";
+import { dbConnection } from "./config/dbConnection.js";
 import {
   checkForAuthentication,
   restrictTo
-} from "./middleware/authMiddleware.mjs";
+} from "./middleware/authMiddleware.js";
 import cookieParser from "cookie-parser";
 import path from "path";
 
-import { urlRouter } from "./routes/urlRouter.mjs";
-import { staticRouter } from "./routes/staticRouter.mjs";
-import { userRouter } from "./routes/userRouter.mjs";
+import { urlRouter } from "./routes/urlRouter.js";
+import { staticRouter } from "./routes/staticRouter.js";
+import { userRouter } from "./routes/userRouter.js";
 const app = express();
 const PORT = process.env.PORT || 8000;
 dbConnection();

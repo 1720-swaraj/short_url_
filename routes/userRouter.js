@@ -2,7 +2,7 @@ import express from "express";
 import {
   handleUserLogin,
   handleUserSignUp,
-} from "../controller/userController.mjs";
+} from "../controller/userController.js";
 export const userRouter = express.Router();
 
 userRouter.post("/", handleUserSignUp);
